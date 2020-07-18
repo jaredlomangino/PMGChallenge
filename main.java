@@ -5,6 +5,8 @@ import java.util.List;
 class Main {
     public static void main(String[] args) {
 
+        addHeader();
+
         for (int i = 0; i < args.length; i++) {
             String fileName = args[i];
             String row = "";
@@ -36,6 +38,23 @@ class Main {
             csvWriter.close();
             br.close();
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void addHeader() {
+        try {
+            FileWriter csvWriter = new FileWriter("new.csv", true);
+            csvWriter.append("email_hash");
+            csvWriter.append(",");
+            csvWriter.append("category");
+            csvWriter.append(",");
+            csvWriter.append("filename");
+            csvWriter.append("\n");
+
+            csvWriter.flush();
+            csvWriter.close();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
