@@ -6,6 +6,8 @@ import java.io.File;
 public class UserInput {
     private String[] args;
 
+    // ------------ Constructors -------------------//
+
     UserInput() {
 
     }
@@ -13,6 +15,8 @@ public class UserInput {
     UserInput(String[] args) {
         this.args = args;
     }
+
+    // ------------ Methods-------------------//
 
     String[] getArgs() {
         return args;
