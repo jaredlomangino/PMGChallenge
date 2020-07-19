@@ -3,7 +3,7 @@ class Main {
     public static void main(String[] args) {
 
         CSVCombiner csvcombiner = new CSVCombiner(args);
-        csvcombiner.combineCSVFiles();
+        csvcombiner.combineCSVFiles(args);
 
     }
 
