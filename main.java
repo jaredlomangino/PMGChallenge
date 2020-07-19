@@ -25,13 +25,10 @@ class Main {
             while ((row = br.readLine()) != null) {
                 List<String> result = Arrays.asList(row.split("\\s*,\\s*"));
 
-                for (int j = 0; j < result.size() - 1; j++) {
-                    csvWriter.append(String.join(",", result));
-                    csvWriter.append(",");
-                    csvWriter.append(fileName);
-                    csvWriter.append("\n");
-                }
-                System.out.println(result);
+                csvWriter.append(String.join(",", result));
+                csvWriter.append(",");
+                csvWriter.append(fileName);
+                csvWriter.append("\n");
 
             }
             csvWriter.flush();
