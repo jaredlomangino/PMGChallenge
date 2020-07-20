@@ -1,5 +1,5 @@
 public class CSVCombiner {
-    UserInput userinput = new UserInput();
+    private UserInput userinput = new UserInput();
 
     // ------------ Constructors-------------------//
     CSVCombiner(String[] args) {
