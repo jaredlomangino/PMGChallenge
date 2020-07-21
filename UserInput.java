@@ -8,23 +8,23 @@ public class UserInput {
 
     // ------------ Constructors -------------------//
 
-    UserInput() {
+    public UserInput() {
 
     }
 
-    UserInput(String[] args) {
+    public UserInput(String[] args) {
         this.args = args;
         checkValidFile();
     }
 
     // ------------ Methods-------------------//
 
-    String[] getArgs() {
+    public String[] getArgs() {
         return args;
     }
 
     // Making sure that the user input is valid
-    void checkValidFile() {
+    public void checkValidFile() {
         for (int i = 0; i < args.length; i++) {
             File file = new File(args[i]);
             if (!file.isFile()) {

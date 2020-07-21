@@ -7,11 +7,11 @@ public class CSVManipulator {
     private String fileName;
 
     // ------------ Constructors-------------------//
-    CSVManipulator() {
+    public CSVManipulator() {
 
     }
 
-    CSVManipulator(String fileName) {
+    public CSVManipulator(String fileName) {
         this.fileName = fileName;
     }
 
@@ -19,7 +19,7 @@ public class CSVManipulator {
 
     // Reads data from CSV file into List
     // Writes data from List to new CSV
-    void csvToList() {
+    public void csvToList() {
 
         try {
             String row = "";
@@ -52,7 +52,7 @@ public class CSVManipulator {
     }
 
     // Method for adding custom column headers
-    void addHeader() {
+    public void addHeader() {
         try {
             FileWriter csvWriter = new FileWriter(COMBINED_CSV_FILE, true);
             String header = "email_hash" + "," + "category" + "," + "filename" + "\n";
@@ -69,7 +69,7 @@ public class CSVManipulator {
     }
 
     // Writes the combined CSV to the terminal
-    void displayNewCSV() {
+    public void displayNewCSV() {
         File file = new File(COMBINED_CSV_FILE);
         String row = "";
         try {

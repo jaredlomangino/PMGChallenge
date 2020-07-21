@@ -2,14 +2,14 @@ public class CSVCombiner {
     private UserInput userInput;
 
     // ------------ Constructors-------------------//
-    CSVCombiner(String[] args) {
+    public CSVCombiner(String[] args) {
         userInput = new UserInput(args);
     }
 
     // ------------ Methods-------------------//
 
     // Creates the new combined CSV file
-    void combineCSVFiles() {
+    public void combineCSVFiles() {
 
         String[] args = userInput.getArgs();
 
