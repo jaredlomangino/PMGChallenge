@@ -1,19 +1,17 @@
 public class CSVCombiner {
-    private UserInput userinput = new UserInput();
+    private UserInput userInput;
 
     // ------------ Constructors-------------------//
     CSVCombiner(String[] args) {
-        UserInput userInput = new UserInput(args);
-        args = userInput.getArgs();
+        userInput = new UserInput(args);
     }
 
     // ------------ Methods-------------------//
 
     // Creates the new combined CSV file
-    void combineCSVFiles(String[] args) {
+    void combineCSVFiles() {
 
-        // Ensure all the files are valid files
-        userinput.checkValidFile(args);
+        String[] args = userInput.getArgs();
 
         // Creating the header for the new file
         CSVManipulator csvManipulator = new CSVManipulator();

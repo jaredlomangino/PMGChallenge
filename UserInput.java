@@ -14,6 +14,7 @@ public class UserInput {
 
     UserInput(String[] args) {
         this.args = args;
+        checkValidFile();
     }
 
     // ------------ Methods-------------------//
@@ -23,7 +24,7 @@ public class UserInput {
     }
 
     // Making sure that the user input is valid
-    void checkValidFile(String[] args) {
+    void checkValidFile() {
         for (int i = 0; i < args.length; i++) {
             File file = new File(args[i]);
             if (!file.isFile()) {
